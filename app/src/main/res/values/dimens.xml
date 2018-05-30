@@ -1,0 +1,28 @@
+<resources>
+    <!--首页tab个性化-->
+    <dimen name="fixed_label_active">12sp</dimen>//tab文字大小
+    <dimen name="fixed_label_inactive">12sp</dimen>
+    <dimen name="fixed_height">60dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="more_small">9sp</dimen>
+    <dimen name="small">10sp</dimen>
+    <dimen name="small1">11sp</dimen>
+    <dimen name="small_little">12sp</dimen>
+    <dimen name="small_to_middle">12sp</dimen>
+    <dimen name="middle_to_small">14sp</dimen>
+    <dimen name="middle">14sp</dimen>
+    <dimen name="middle_more">15sp</dimen>
+    <dimen name="middle_more_little">16sp</dimen>
+    <dimen name="middle_more_big">18sp</dimen>
+    <dimen name="middle_to_big">20sp</dimen>
+    <dimen name="big">23sp</dimen>
+    <dimen name="big_better">25sp</dimen>
+    <dimen name="big_best">30sp</dimen>
+    <dimen name="big_big">40sp</dimen>
+    <dimen name="w_h">60dp</dimen>
+    <dimen name="middle_small">13sp</dimen>
+</resources>
