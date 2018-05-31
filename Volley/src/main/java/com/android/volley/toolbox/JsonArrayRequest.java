@@ -43,7 +43,7 @@ public class JsonArrayRequest extends JsonRequest<JSONArray> {
     }
 
     @Override
-    protected Response<JSONArray> parseNetworkResponse(NetworkResponse response) {
+    public Response<JSONArray> parseNetworkResponse(NetworkResponse response) {
         try {
             String jsonString =
                 new String(response.data, HttpHeaderParser.parseCharset(response.headers));

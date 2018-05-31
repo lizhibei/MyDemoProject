@@ -55,7 +55,7 @@ public class ImageRequest extends Request<Bitmap> {
     }
 
     @Override
-    protected Response<Bitmap> parseNetworkResponse(NetworkResponse response) {
+    public Response<Bitmap> parseNetworkResponse(NetworkResponse response) {
         synchronized (sDecodeLock) {
             try {
                 return doParse(response);
@@ -169,7 +169,7 @@ public class ImageRequest extends Request<Bitmap> {
 
 
     @Override
-    protected void deliverResponse(Bitmap response) {
+    public void deliverResponse(Bitmap response) {
         mListener.onResponse(response);
     }
 }
