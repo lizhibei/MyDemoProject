@@ -16,10 +16,10 @@
 package com.android.volley.toolbox;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatImageView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.ImageView;
 
 import com.android.volley.VolleyError;
 import com.android.volley.request.ImageLoader;
@@ -30,7 +30,7 @@ import com.android.volley.request.ImageLoader.ImageListener;
  * Handles fetching an image from a URL as well as the life-cycle of the
  * associated request.
  */
-public class NetworkImageView extends ImageView {
+public class NetworkImageView extends AppCompatImageView {
     /** The URL of the network image to load */
     private String mUrl;
 
@@ -170,7 +170,7 @@ public class NetworkImageView extends ImageView {
                             setImageResource(mDefaultImageId);
                         }
                     }
-                });
+                },0,0,ScaleType.CENTER);
 
         // update the ImageContainer to be the new bitmap container.
         mImageContainer = newContainer;

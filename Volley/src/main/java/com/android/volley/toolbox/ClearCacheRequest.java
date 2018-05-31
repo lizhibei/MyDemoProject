@@ -16,13 +16,13 @@
 
 package com.android.volley.toolbox;
 
-import com.android.volley.Cache;
-import com.android.volley.NetworkResponse;
-import com.android.volley.request.Request;
-import com.android.volley.Response;
-
 import android.os.Handler;
 import android.os.Looper;
+
+import com.android.volley.Cache;
+import com.android.volley.NetworkResponse;
+import com.android.volley.Response;
+import com.android.volley.request.Request;
 
 /**
  * A synthetic request used for clearing the cache.
@@ -60,11 +60,11 @@ public class ClearCacheRequest extends Request<Object> {
     }
 
     @Override
-    protected Response<Object> parseNetworkResponse(NetworkResponse response) {
+    public Response<Object> parseNetworkResponse(NetworkResponse response) {
         return null;
     }
 
     @Override
-    protected void deliverResponse(Object response) {
+    public void deliverResponse(Object response) {
     }
 }

@@ -26,7 +26,7 @@ public class StringRequest extends Request<String>{
 
     /** 将HTTP请求结果转换为String. */
     @Override
-    protected Response<String> parseNetworkResponse(NetworkResponse response) {
+    public Response<String> parseNetworkResponse(NetworkResponse response) {
         String parsed;
 
         try {
@@ -39,7 +39,7 @@ public class StringRequest extends Request<String>{
 
     /** 将解析的String结果传递给用户的回调接口. */
     @Override
-    protected void deliverResponse(String response) {
+    public void deliverResponse(String response) {
         mListener.onResponse(response);
     }
 }

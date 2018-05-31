@@ -137,7 +137,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
     }
 
     /** 用于告知请求队列当前request已经结束. */
-    void finish(final String tag) {
+    public void finish(final String tag) {
         if (mRequestQueue != null) {
             mRequestQueue.finish(this);
         }
@@ -299,15 +299,34 @@ public abstract class Request<T> implements Comparable<Request<T>> {
     }
 
     /** 子类必须重写该方法，用来解析http请求的结果. */
-    abstract protected Response<T> parseNetworkResponse(NetworkResponse response);
+    abstract public Response<T> parseNetworkResponse(NetworkResponse response);
 
     /** 子类可以重写该方法，从而获取更精准的出错信息. */
-    protected VolleyError parseNetworkError(VolleyError volleyError) {
+    public VolleyError parseNetworkError(VolleyError volleyError) {
         return volleyError;
     }
 
+    protected Map<String, String> getPostParams() throws AuthFailureError {
+        return this.getParams();
+    }
+
+    protected String getPostParamsEncoding() {
+        return this.getParamsEncoding();
+    }
+
+    /** @deprecated */
+    public String getPostBodyContentType() {
+        return this.getBodyContentType();
+    }
+
+    /** @deprecated */
+    public byte[] getPostBody() throws AuthFailureError {
+        Map<String, String> postParams = this.getPostParams();
+        return postParams != null && postParams.size() > 0 ? this.encodeParameters(postParams, this.getPostParamsEncoding()) : null;
+    }
+
     /** 子类必须重写该方法用于将网络结果返回给用户设置的回调接口. */
-    abstract protected void deliverResponse(T response);
+    abstract public void deliverResponse(T response);
 
     /** 将网络错误传递给回调接口. */
     public void deliverError(VolleyError error) {
