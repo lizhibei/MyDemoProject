@@ -28,5 +28,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('libs/volley.jar')
     implementation files('libs/universal-image-loader-1.9.3-with-sources.jar')
-    compile 'com.yanzhenjie:permission:1.0.6'
+    implementation 'com.yanzhenjie:permission:1.0.6'
 }
