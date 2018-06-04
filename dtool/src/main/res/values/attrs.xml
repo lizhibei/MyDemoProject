@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="goodsize">
+        <attr name="normalcolor" format="color" />
+        <attr name="selectcolor" format="color" />
+        <attr name="mtextsize" format="dimension" />
+        <attr name="selectbackgroud" />
+        <attr name="normalbackgroud" />
+        <attr name="horizontal_interval" format="dimension" />
+        <attr name="vertical_interval" format="dimension" />
+    </declare-styleable>
+</resources>
